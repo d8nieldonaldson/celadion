@@ -1,0 +1,24 @@
+{
+  "name": "celadion",
+  "version": "1.0.0",
+  "description": "browser extension to promote healthy eyes",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/d8nieldonaldson/celadion.git"
+  },
+  "keywords": [
+    "vision",
+    "eyes",
+    "health"
+  ],
+  "author": "Daniel Lee Donaldson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/d8nieldonaldson/celadion/issues"
+  },
+  "homepage": "https://github.com/d8nieldonaldson/celadion#readme"
+}

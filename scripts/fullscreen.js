@@ -4,12 +4,14 @@ const goFullscreenBtn = document.querySelector('.js-go-fullscreen-btn');
 const exitFullscreenBtn = document.querySelector('.js-exit-fullscreen-btn');
 const fullscreenContainer = document.querySelector('.js-fullscreen-container');
 
+let setBrowser;
+
 if(document.webkitCurrentFullScreenElement == fullscreenContainer){
     console.log('fullscreen');
   }
 
 
-const launchIntoFullscreen = (element) => {
+const goFullscreen = (element) => {
     if(element.requestFullscreen) {
       element.requestFullscreen();
       console.log('no prefix fullscreen');
@@ -40,7 +42,7 @@ const launchIntoFullscreen = (element) => {
 
 goFullscreenBtn.addEventListener('click', (e) => {
     fullscreenContainer.classList.remove('hidden');
-    launchIntoFullscreen(fullscreenContainer);
+    goFullscreen(fullscreenContainer);
 }, false)
   
 exitFullscreenBtn.addEventListener('click', (e) => {

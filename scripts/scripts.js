@@ -123,10 +123,8 @@ document.addEventListener("webkitfullscreenchange mozfullscreenchange fullscreen
 
 
   document.addEventListener('webkitfullscreenchange', function(e){
-    console.log('ksjf;asfjk;afj' + document.webkitCurrentFullScreenElement);
-    if(document.webkitCurrentFullScreenElement == fullscreenContainer){
-      console.log('right el');
-    }else if(!document.webkitCurrentFullScreenElement){
+     if(!document.webkitCurrentFullScreenElement){
       console.log('escaping fullscreen');
+      fullscreenContainer.classList.add('hidden');
     }
   });

@@ -126,5 +126,7 @@ document.addEventListener("webkitfullscreenchange mozfullscreenchange fullscreen
     console.log('ksjf;asfjk;afj' + document.webkitCurrentFullScreenElement);
     if(document.webkitCurrentFullScreenElement == fullscreenContainer){
       console.log('right el');
+    }else if(!document.webkitCurrentFullScreenElement){
+      console.log('escaping fullscreen');
     }
   });

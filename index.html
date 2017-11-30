@@ -1,21 +1,24 @@
 <!doctype html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link href="styles.css" rel="stylesheet" />
     </head>
     <body>
         <main>
             <time class="js-timer timer"></time>
-            <fieldset>
+            <button class="js-pause-timer-btn">Pause</button>
+            <fieldset class="js-buttons-container hidden">
                 <legend class="js-message">Wouldn't you like to rest your eyes for a bit?</legend>
                 <button class="js-go-fullscreen-btn">Yes</button>
                 <button class="js-cancel-timer-btn">No, skip it</button>
-                <button class="js-pause-timer-btn">Pause</button>
             </fieldset>
             <div class="js-fullscreen-container fullscreen-container hidden">
                 <button class="js-exit-fullscreen-btn">Exit</button>
             </div>
         </main>
-        <script src="scripts/scripts.js"></script>
+        <script src="scripts/utils.js"></script>
+        <script src="scripts/fullscreen.js"></script>
+        <script src="scripts/timer.js"></script>
     </body>
 </html>

@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/d8nieldonaldson/celadion/issues"
   },
-  "homepage": "https://github.com/d8nieldonaldson/celadion#readme"
+  "homepage": "https://github.com/d8nieldonaldson/celadion#readme",
+  "dependencies": {
+    "casperjs": "^1.1.4"
+  }
 }

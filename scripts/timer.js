@@ -17,6 +17,7 @@ const countdownRest = (dur) => {
     if(dur === 0){
       clearInterval(interval);
       console.log('done');
+      exitFullscreen();
       countdownFull(fullDuration);
     }
   },1000)
@@ -25,8 +26,8 @@ const countdownRest = (dur) => {
 
 const countdownFull = (fullDur) => {
   let fullInterval = setInterval(() => {
-    timerContainer.classList.remove('hidden');
     buttonsContainer.classList.add('hidden');
+    timerContainer.classList.remove('hidden');
     fullDur--;
     timer.textContent = `${formatTime(fullDur)}`;
     if(fullDur === 0){
@@ -34,7 +35,7 @@ const countdownFull = (fullDur) => {
       timerContainer.classList.add('hidden');
       buttonsContainer.classList.remove('hidden');
       messageContainer.textContent = messageText;
-      countdownRest(restDuration);
+      //countdownRest(restDuration);
     }
   }, 1000)
 }

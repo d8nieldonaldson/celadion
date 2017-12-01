@@ -38,23 +38,16 @@ const goFullscreen = (element) => {
     } else if(document.msExitFullscreen) {
         document.msExitFullscreen();
     }
+    countdownFull(fullDuration);
   }
-
-goFullscreenBtn.addEventListener('click', (e) => {
-    fullscreenContainer.classList.remove('hidden');
-    goFullscreen(fullscreenContainer);
-}, false)
-  
-exitFullscreenBtn.addEventListener('click', (e) => {
-    fullscreenContainer.classList.add('hidden');
-    exitFullscreen();
-}, false)
   
  
 document.addEventListener('fullscreenchange', (e) => {
     if(!document.fullscreenElement){
       console.log('escaping fullscreen no prefix');
       fullscreenContainer.classList.add('hidden');
+      countdownFull(fullDuration);
+      
     }
 }, false);
   
@@ -62,6 +55,7 @@ document.addEventListener('webkitfullscreenchange', (e) =>{
       if(!document.webkitCurrentFullScreenElement){
       console.log('escaping fullscreen webkit');
       fullscreenContainer.classList.add('hidden');
+      countdownFull(fullDuration);
     }
 }, false);
   
@@ -69,6 +63,7 @@ document.addEventListener('mozfullscreenchange', (e) => {
     if(!document.mozFullScreenElement){
       console.log('escaping fullscreen moz');
       fullscreenContainer.classList.add('hidden');
+      countdownFull(fullDuration);
     }
 }, false);
 

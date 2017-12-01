@@ -1,5 +1,6 @@
 console.log('timer js loaded');
 
+const timerContainer = document.querySelector('.js-timer-container');
 const timer = document.querySelector('.js-timer');
 const messageContainer = document.querySelector('.js-message');
 const buttonsContainer = document.querySelector('.js-buttons-container');
@@ -24,12 +25,14 @@ const countdownRest = (dur) => {
 
 const countdownFull = (fullDur) => {
   let fullInterval = setInterval(() => {
+    timerContainer.classList.remove('hidden');
     buttonsContainer.classList.add('hidden');
     clearText(messageContainer);
     fullDur--;
-    timer.textContent = `Time remaining until next break ${formatTime(fullDur)}`;
+    timer.textContent = `${formatTime(fullDur)}`;
     if(fullDur === 0){
       clearInterval(fullInterval);
+      timerContainer.classList.add('hidden');
       clearText(timer);
       buttonsContainer.classList.remove('hidden');
       messageContainer.textContent = messageText;
@@ -39,5 +42,5 @@ const countdownFull = (fullDur) => {
 }
 
 // populate timer
-timer.textContent = `Time remaining until next break ${formatTime(fullDuration)}`;
+timer.textContent = `${formatTime(fullDuration)}`;
 countdownFull(fullDuration);

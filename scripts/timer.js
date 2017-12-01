@@ -27,13 +27,11 @@ const countdownFull = (fullDur) => {
   let fullInterval = setInterval(() => {
     timerContainer.classList.remove('hidden');
     buttonsContainer.classList.add('hidden');
-    clearText(messageContainer);
     fullDur--;
     timer.textContent = `${formatTime(fullDur)}`;
     if(fullDur === 0){
       clearInterval(fullInterval);
       timerContainer.classList.add('hidden');
-      clearText(timer);
       buttonsContainer.classList.remove('hidden');
       messageContainer.textContent = messageText;
       countdownRest(restDuration);

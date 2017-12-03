@@ -6,14 +6,15 @@
     </head>
     <body>
         <main>
-            <section class="js-timer-container">
+            <section class="js-timer-container timer-container">
                 <time class="js-timer timer"></time>
-                <button class="js-pause-timer-btn">Pause</button>
+                <button class="js-stop-timer-btn">Stop</button>
+                <button class="js-start-timer-btn start-timer-btn hidden">Start</button>
             </section>  
-            <fieldset class="js-buttons-container hidden">
+            <fieldset class="js-buttons-container buttons-container hidden">
                 <legend class="js-message">Wouldn't you like to rest your eyes for a bit?</legend>
-                <button class="js-go-fullscreen-btn">Yes</button>
-                <button class="js-reset-timer-btn">No, skip it</button>
+                <button class="js-start-rest-btn">Yes</button>
+                <button class="js-skip-rest-btn">No, skip it</button>
             </fieldset>
             <div class="js-fullscreen-container fullscreen-container hidden">
                 <button class="js-exit-fullscreen-btn">Exit</button>

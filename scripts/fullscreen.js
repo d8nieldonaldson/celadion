@@ -1,6 +1,6 @@
 console.log('fullscreen js loaded');
 
-const goFullscreenBtn = document.querySelector('.js-go-fullscreen-btn');
+const startRestBtn = document.querySelector('.js-start-rest-btn');
 const exitFullscreenBtn = document.querySelector('.js-exit-fullscreen-btn');
 const fullscreenContainer = document.querySelector('.js-fullscreen-container');
 

@@ -1,5 +1,7 @@
 console.log('utils js loaded');
-const resetTimerBtn = document.querySelector('.js-reset-timer-btn');
+const startTimerBtn = document.querySelector('.js-start-timer-btn');
+const stopTimerBtn = document.querySelector('.js-stop-timer-btn');
+const skipRestBtn = document.querySelector('.js-skip-rest-btn');
 
   
 //https://stackoverflow.com/questions/3733227/javascript-seconds-to-minutes-and-seconds

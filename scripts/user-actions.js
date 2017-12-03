@@ -1,7 +1,21 @@
 console.log('user actions js loaded');
 
+startTimerBtn.addEventListener('click', (e) => {
+    startTimerBtn.classList.add('hidden');
+    stopTimerBtn.classList.remove('hidden');
+    countdownFull(fullDuration);
+});
 
-goFullscreenBtn.addEventListener('click', (e) => {
+stopTimerBtn.addEventListener('click',  (e) => {
+    stopTimerBtn.classList.add('hidden');
+    startTimerBtn.classList.remove('hidden');
+    clearInterval(fullInterval);
+    timer.classList.add('hidden');
+    timer.textContent = '';
+})
+
+
+startRestBtn.addEventListener('click', (e) => {
     fullscreenContainer.classList.remove('hidden');
     countdownRest(restDuration);
     goFullscreen(fullscreenContainer);
@@ -12,10 +26,12 @@ exitFullscreenBtn.addEventListener('click', (e) => {
     exitFullscreen();
 }, false);
 
-resetTimerBtn.addEventListener('click', (e) => {
-    console.log('reset button clicked');
+skipRestBtn.addEventListener('click', (e) => {
+    console.log('skip rest clicked');
     countdownFull(fullDuration);
 });
+
+
 
 
 

@@ -23,12 +23,14 @@ const countdownRest = (dur) => {
   },1000)
 };
 
+var fullInterval;
 
 const countdownFull = (fullDur) => {
-  let fullInterval = setInterval(() => {
+  fullInterval = setInterval(() => {
     buttonsContainer.classList.add('hidden');
     timerContainer.classList.remove('hidden');
     fullDur--;
+    timer.classList.remove('hidden');
     timer.textContent = `${formatTime(fullDur)}`;
     if(fullDur === 0){
       clearInterval(fullInterval);
@@ -39,6 +41,31 @@ const countdownFull = (fullDur) => {
     }
   }, 1000)
 }
+/*
+const config = {
+  dur: 6
+};
+
+const countdownObj = {
+  countdown: setInterval((dur) =>{
+    if(dur){dur--;}else{dur = 0}   
+    return console.log(dur);
+    }, 1000)
+};
+
+const testObj = {
+  method1: (msg) => {
+    console.log(msg);
+  }
+};
+
+const newObj = {};
+newObj.method = setInterval(;
+  },1000)
+  
+  return console.log(dur);
+}
+*/
 
 // populate timer
 timer.textContent = `${formatTime(fullDuration)}`;
